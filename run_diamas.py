@@ -1,21 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-run_diamas.py — DiaMAS recommendation programs (Single and Collaborative).
-
-For every admission JSON in --patient_dir the engine
-  1. flattens the structured record and infers clinical states (deterministic/probabilistic rules),
-  2. assigns the admission year and the matching guideline year,
-  3. decides which specialist agents are eligible (nephrology, cardiology; endocrinology always),
-  4. retrieves year-bounded guideline evidence routed by specialty,
-  5. (Collaborative only) runs specialist opinions, semantic conflict detection, revision and adjudication,
-  6. builds the prompt and calls the shared LLM for the final synthesis,
-  7. parses the plan and applies the critical drug-interaction audit.
-
-One JSON result per admission is written to <output_dir>/<model>_<temperature>/patient_<id>.json.
-Recorded prescriptions and post-index outcomes are never passed to the programs.
-"""
-
 from __future__ import annotations
 
 import dataclasses
@@ -32,7 +14,6 @@ from typing import Dict, List, Optional, Tuple
 
 from tqdm import tqdm
 
-# ── 日志 ──────────────────────────────────────────────────────────────────────
 Path("loggings").mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
@@ -44,7 +25,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ── 内部模块 ──────────────────────────────────────────────────────────────────
 from agents.llm_client import DeepseekClient
 from agents.config import ModelConfig, DrugEraConfig
 
@@ -57,26 +37,10 @@ from diamas_utils.era_retriever import (
 from diamas_utils.prompt_builder import DiamasPromptBuilder, era_label_for_year
 from diamas_utils.ada_guideline_processor import (
     ADAGuidelineIndex, ADAGuidelineProcessor,
-    ClinicalGuidelineRegistry, build_all_indexes,   # [v8] 多源指南 + 混合检索
+    ClinicalGuidelineRegistry, build_all_indexes,
 )
 
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# DiamasRecommendationEngine — 核心推荐引擎
-# ═══════════════════════════════════════════════════════════════════════════════
-
 class DiamasRecommendationEngine:
-    """
-    Dia-MAS 核心推荐引擎（PCAR 框架，8步流程）
-
-    Step 1: flatten_clinical_metrics()    → 特征扁平化
-    Step 2: ClinicalPhenotyper.infer()    → 三阶段表型推断
-    Step 3: infer_era_year()              → Era 标签 + 精确 ADA 年份
-    Step 4: EraAwareEvidenceRetriever     → 时序保真证据检索
-    Step 5: decide_mdt_activation() + VirtualMDT.conduct_mdt()  → 条件性 MDT
-    Step 6: DiamasPromptBuilder.build()   → 5段式 Prompt
-    Step 7: LLM call → _parse_response()  → 结构化推荐结果 + DDI 审计
-    """
 
     def __init__(
         self,
@@ -97,18 +61,17 @@ class DiamasRecommendationEngine:
         self.temperature = temperature
         self.max_tokens  = max_tokens
         self.use_mdt     = use_mdt
-        self._guideline_sources = guideline_sources or []   # [v6] 用于动态构建指南来源声明
+        self._guideline_sources = guideline_sources or []
 
         self.llm_client    = DeepseekClient()
         self.phenotyper    = ClinicalPhenotyper(llm_client=None)
         self.prompt_builder = DiamasPromptBuilder()
 
-        # ── 指南索引加载 ──────────────────────────────────────────────────────
         registry  = None
         ada_index = None
 
         if guidelines_dir and Path(guidelines_dir).exists():
-            # try:
+
             from diamas_utils.ada_guideline_processor import build_all_indexes
             _idx_dir = Path(index_dir) if index_dir else Path(guidelines_dir).parent / "indexes"
             registry = build_all_indexes(
@@ -122,9 +85,6 @@ class DiamasRecommendationEngine:
                 logger.info(f"多源指南注册表: sources={registry.active_sources}, ada_chunks={len(ada_index.chunks)}")
             else:
                 logger.warning("注册表 ADA 索引为空，降级到独立加载")
-            # except Exception as e:
-            #     logger.warning(f"多源注册表构建失败，降级到 ADA-only: {e}")
-            #     registry = None
 
         if ada_index is None:
             ada_index = self._load_ada_index(ada_index_path, ada_guidelines_dir)
@@ -133,7 +93,6 @@ class DiamasRecommendationEngine:
 
         self.retriever = EraAwareEvidenceRetriever(ada_index=ada_index, pubmed=None, registry=registry)
 
-        # ── MDT 懒加载 ────────────────────────────────────────────────────────
         self._judge_model = judge_model
         self._max_debate_rounds = max_debate_rounds
         self._mdt = None
@@ -154,50 +113,28 @@ class DiamasRecommendationEngine:
             f"mdt={self._mdt is not None}, sources={guideline_sources}"
         )
 
-    # ── 主推荐接口 ────────────────────────────────────────────────────────────
-
     def recommend(self, patient_data: Dict) -> Dict:
-        """为单个患者生成推荐（8步 PCAR 流程）。"""
         t0         = time.time()
         subject_id = patient_data.get("subject_id", 0)
         hadm_id    = patient_data.get("hadm_id", 0)
         patient_id = f"{subject_id}_{hadm_id}"
 
         try:
-            # Step 1: 特征扁平化
+
             flat = flatten_clinical_metrics(patient_data)
             patient_summary = self._build_patient_summary(patient_data, flat)
 
-            # Step 2: 表型推断
             states = self.phenotyper.infer(flat, patient_data)
             logger.debug(f"{patient_id}: {len(states)} states: {[s.name for s in states]}")
 
-            # Step 3: Era 推断
             era_label, ada_year = infer_era_year(patient_data, flat)
 
-            # Step 4: 条件性 MDT 激活决策（先于证据检索）
-            # ─────────────────────────────────────────────────────────────────
-            # 必须先决定激活哪些专科，再精准路由专科指南检索：
-            #   旧流程：retrieve(threshold=0.6) → 白费 token 检索未激活专科
-            #            → EvidenceGap 事后补丁（Step 4b）
-            #   新流程：先 decide_mdt_activation(threshold=0.70) 确定 active_roles
-            #            → retrieve(active_roles=...) 按激活专科精准路由
-            #            → EvidenceGap fallback 仍保留，应对"激活但无时序匹配"场景
             should_mdt, active_roles = decide_mdt_activation(states)
 
-            # Step 5: 证据检索 (v8: 按激活专科精准路由 + PubMed 文本)
             evidence_by_source, pubmed_evidence = self.retriever.retrieve(
                 states, ada_year, flat, active_roles=active_roles
             )
 
-            # Step 5b: EvidenceGap fallback — 激活专科未被主检索命中时的补充检索
-            # 场景：retrieve() 路由到激活专科，但 evidence_by_source 里没有该专科
-            # owned 的任何源（可能是路由/检索侧的覆盖缺口）。
-            # [v18b P6] **era 天花板始终保留**（era_year=ada_year）。原实现用
-            # era_year=None 放开天花板，是全系统唯一会主动破坏时间防火墙的路径；
-            # v18 冒烟实测 Era-1 触发率 39%，注入了 KDIGO 2012+ 内容。
-            # 现在：某时代若确无该专科指南（Era-1 肾科即如此，KDIGO 首版 2012），
-            # fallback 返回空 → 不注入 → 忠实表现"该时代无证据"。
             _SPECIALTY_OWNED_SOURCES = {
                 "nephrology": ["kdigo", "ada_supplements"],
                 "cardiology": ["esc", "acc_aha"],
@@ -216,9 +153,7 @@ class DiamasRecommendationEngine:
                     already_present = any(k in evidence_by_source for k in owned)
                     if already_present:
                         continue
-                    # Specialty is activated but has no era-appropriate evidence.
-                    # Try without era_num filter so the MDT agent receives at least
-                    # some guideline context (labeled with temporal warning in prompt).
+
                     logger.warning(
                         f"[EvidenceGap] {role} ({sp}) activated but no "
                         f"era-appropriate guideline found for {era_label} "
@@ -229,12 +164,7 @@ class DiamasRecommendationEngine:
                         fallback_ev = self._registry.format_evidence_for_specialty(
                             specialty    = sp,
                             queries      = _all_queries[:5],
-                            # [v18b P6] 保留 era 天花板（原为 None = 取消天花板）。
-                            # v18 冒烟实测：P0-year 之后本 fallback 从"从未触发"变成
-                            # Era-1 触发率 65/168=39%，而 era_year=None 是全系统唯一
-                            # 会主动破坏时间防火墙的路径。
-                            # Era-1 无肾科指南是历史事实（KDIGO 首版 2012、ESC 首版 2007），
-                            # 正确表现是"该时代无证据"，而非拿 2012 年内容凑数。
+
                             era_year     = ada_year,
                             top_k        = 4,
                             use_chinese  = False,
@@ -252,7 +182,6 @@ class DiamasRecommendationEngine:
                     except Exception as _eg:
                         logger.debug(f"[EvidenceGap] fallback retrieval failed [{sp}]: {_eg}")
 
-            # legacy 字符串供 MDT 内部 fallback 与 metadata 字段使用
             ada_evidence_legacy = "\n\n".join(v for v in evidence_by_source.values() if v.strip())
             mdt_result = mdt_summary = None
             if should_mdt and self._mdt is not None:
@@ -269,8 +198,8 @@ class DiamasRecommendationEngine:
                     }
                     mdt_result  = self._mdt.conduct_mdt(
                         phase_a_result  = phase_a_stub,
-                        flat            = flat,           # pre-computed at Step 1
-                        patient_data    = patient_data,   # for lipids, dm_complications, etc.
+                        flat            = flat,
+                        patient_data    = patient_data,
                         active_experts  = active_roles,
                     )
                     mdt_summary = self._format_mdt_for_prompt(mdt_result)
@@ -278,16 +207,15 @@ class DiamasRecommendationEngine:
                 except Exception as e:
                     logger.warning(f"{patient_id}: MDT 失败，退化为单路径: {e}")
 
-            # Step 7: Prompt 构建 + LLM 推理 (v7: 传入 evidence_by_source dict)
             system_content, user_content = self.prompt_builder.build(
                 patient_summary=patient_summary, states=states,
-                ada_evidence=ada_evidence_legacy,                # 向后兼容字段
+                ada_evidence=ada_evidence_legacy,
                 pubmed_evidence=pubmed_evidence,
                 era_label=era_label, ada_year=ada_year,
                 mdt_summary=mdt_summary, active_roles=active_roles,
                 flat=flat,
                 guideline_sources=self._collect_guideline_sources(evidence_by_source),
-                evidence_by_source=evidence_by_source,           # v7: 主路径
+                evidence_by_source=evidence_by_source,
             )
 
             response = self.llm_client.chat(
@@ -301,7 +229,6 @@ class DiamasRecommendationEngine:
             response_text = self.llm_client.get_response_text(response) or ""
             usage = response.get("usage", {})
 
-            # Step 8: 解析输出 (v7: 单模式 + complication_drugs)
             recommended_drugs, complication_drugs, reasoning, excluded = self._parse_response(response_text)
 
             _comp_source = complication_drugs or []
@@ -315,7 +242,6 @@ class DiamasRecommendationEngine:
                     recommended_drugs.append(_cd)
                     _seen_names.add(_name)
 
-            # Bug-3: DDI 阻断（critical 级别直接移除冲突药）
             try:
                 from evaluation.safety_checker import DrugInteractionAuditor, DDIWarning
                 from dataclasses import asdict as _asdict
@@ -338,7 +264,7 @@ class DiamasRecommendationEngine:
                     "discharge": patient_data.get("discharge_medications", []),
                 },
                 "recommended_drugs":  recommended_drugs,
-                "complication_drugs": complication_drugs,        # v7 新增
+                "complication_drugs": complication_drugs,
                 "reasoning":     reasoning,
                 "raw_output":    response_text,
                 "inference_time":     time.time() - t0,
@@ -369,7 +295,6 @@ class DiamasRecommendationEngine:
                     "excluded_classes":    excluded,
                     "patho_states":        [{"state": s.name, "confidence": s.confidence, "implication": s.implication} for s in states],
 
-                    # ── §63-P6 新增：可审计性与配置可复原性 ──────────────────
                     "mdt_expert_opinions": (
                         [
                             {
@@ -378,7 +303,7 @@ class DiamasRecommendationEngine:
                                 "complication_drugs": op.complication_drugs,
                                 "key_concerns":       op.key_concerns,
                                 "reasoning":          op.reasoning,
-                                # raw_output 不落盘：体积大且 §66 已证自由文本不可复现
+
                             }
                             for op in mdt_result.expert_opinions
                         ] if mdt_result else []
@@ -407,16 +332,8 @@ class DiamasRecommendationEngine:
                 "diamas_metadata": {"dual_mode_raw": None},
             }
 
-    # ── 辅助方法 ──────────────────────────────────────────────────────────────
-
     @staticmethod
     def _parse_response(response_text: str) -> Tuple[List[Dict], List[Dict], str, List[Dict]]:
-        """
-        v7: 解析 LLM 单模式输出 → (recommended_drugs, complication_drugs, reasoning, excluded_classes)。
-
-        兼容旧版 mode_a 嵌套格式（自动平铺到顶层）。
-        complication_drugs 字段缺失时返回空列表。
-        """
         if not response_text:
             return [], [], "", []
 
@@ -446,7 +363,6 @@ class DiamasRecommendationEngine:
         if not isinstance(data, dict):
             return [], [], clean, []
 
-        # 兼容老 mode_a 包裹结构
         mode_a = data.get("mode_a") if isinstance(data.get("mode_a"), dict) else {}
 
         raw_dm    = data.get("recommended_drugs")  or mode_a.get("recommended_drugs")  or []
@@ -480,10 +396,6 @@ class DiamasRecommendationEngine:
 
     @staticmethod
     def _extract_dual_mode_raw(response_text: str) -> Optional[Dict]:
-        """
-        [v7 deprecated] 双模式解析器。
-        v7 移除 mode_b/cii_divergence 后保留为兼容性 stub（始终返回 None）。
-        """
         return None
 
     @staticmethod
@@ -491,13 +403,6 @@ class DiamasRecommendationEngine:
         return round((prompt_tokens * 0.27 + completion_tokens * 1.10) / 1_000_000, 6)
 
     def _format_mdt_for_prompt(self, mdt_result) -> str:
-        """
-        v7: 完整注入各专科 DM + 并发症药 + 关键顾虑 + 最终并发症方案。
-
-        旧版 (v6) bug: 仅显示 op.recommended_drugs (DM 降糖药)，导致心内科/肾科的
-        并发症药 (op.complication_drugs) 被静默丢弃，让主推断 LLM 看到的 MDT 摘要
-        变成 "[心内科] → (no specific drugs)"。本方法修复该缺陷。
-        """
         if mdt_result is None:
             return ""
 
@@ -507,18 +412,15 @@ class DiamasRecommendationEngine:
             "",
         ]
 
-        # ── 各专家详细意见 ────────────────────────────────────────────────────
         for op in mdt_result.expert_opinions:
             lines.append(f"  [{op.role}]")
 
-            # DM 降糖药（内分泌科主导，心内科/肾科可能为空，标"(none)"以示故意而非疏漏）
             if op.recommended_drugs:
                 dm_str = ', '.join(op.recommended_drugs[:8])
             else:
                 dm_str = "(no DM-drug recommendation from this specialty)"
             lines.append(f"    DM drugs:           {dm_str}")
 
-            # 并发症药（心内科/肾科主导）
             comp_drugs = getattr(op, "complication_drugs", []) or []
             if comp_drugs:
                 comp_items = []
@@ -544,13 +446,11 @@ class DiamasRecommendationEngine:
                 comp_str = "(no complication drugs)"
             lines.append(f"    Complication drugs: {comp_str}")
 
-            # 关键顾虑
             if op.key_concerns:
                 concerns_str = '; '.join(op.key_concerns[:5])
                 lines.append(f"    Key concerns:       {concerns_str}")
             lines.append("")
 
-        # ── 检测到的冲突 ────────────────────────────────────────────────────
         if mdt_result.conflicts:
             lines.append(f"  Conflicts detected ({len(mdt_result.conflicts)}):")
             for c in mdt_result.conflicts[:6]:
@@ -560,7 +460,6 @@ class DiamasRecommendationEngine:
                 )
             lines.append("")
 
-        # ── MDT 裁决最终方案 ────────────────────────────────────────────────
         final_dm = mdt_result.final_drugs or []
         final_dm_str = ', '.join(d.get('drug', '') for d in final_dm[:6]) or "(see individual opinions)"
         lines.append(f"  Final MDT plan — DM drugs:           {final_dm_str}")
@@ -589,9 +488,7 @@ class DiamasRecommendationEngine:
             "position is adopted and why. The complication drugs above represent the "
             "MDT's specialty-driven recommendations; integrate them into your final "
             "prescription unless you identify a contraindication not yet considered. "
-            # [v18c P3a] MDT 方案只覆盖**已激活专科**的 scope；未激活专科对应的
-            # 药物类别不会出现在上面的方案里。v18b 实测合成阶段对该方案强锚定
-            # （MDT 采纳率均值 96%），导致未覆盖类别被连带遗漏。
+
             "NOTE: the MDT plan above reflects only the ACTIVATED specialties' scope — "
             "categories outside that scope are simply absent from it, not ruled out. "
             "Independently verify that every guideline-indicated complication category "
@@ -600,17 +497,9 @@ class DiamasRecommendationEngine:
         return "\n".join(lines)
 
     def _collect_guideline_sources(self, evidence_by_source: Optional[Dict] = None) -> Dict:
-        """
-        动态构建指南来源声明，与实际 --sources 参数保持一致。
-
-        [v6 修复] 原代码在 registry 无索引时 fallback 到硬编码全量列表，
-        导致系统提示声明的来源与实际 RAG 检索来源不一致（消融实验失效）。
-        现在 fallback 使用 self._guideline_sources（来自 --sources 参数）。
-        """
         ada_years: List[int] = []
         if self.retriever.ada_index and self.retriever.ada_index.by_year:
             ada_years = sorted(self.retriever.ada_index.by_year.keys())
-
 
         _SRC_DISPLAY_V18 = {
             "kdigo":             "KDIGO CKD Guidelines",
@@ -631,27 +520,26 @@ class DiamasRecommendationEngine:
 
         registry = getattr(self, "_registry", None)
         if registry and getattr(registry, "_source_indexes", None):
-            # 从真实索引中读取来源名称
-            # [v18] 过滤 ada：原代码未过滤，导致 A2 的声明里 ADA 出现两次
+
             other = [getattr(idx, "source_name", sk.upper())
                      for sk, idx in registry._source_indexes.items()
                      if str(sk).strip().lower() != "ada"]
         elif self._guideline_sources:
-            # 用实际传入的 --sources 参数生成声明（无索引时的准确 fallback）
+
             _source_display = {
                 "kdigo":             "KDIGO CKD Guidelines",
                 "esc":               "ESC CVD in Diabetes Guidelines",
                 "acc_aha":           "ACC/AHA Cholesterol & HF Guidelines",
                 "aace":              "AACE Diabetes Guidelines",
                 "ada_supplements":   "ADA Supplement Guidelines",
-                "endocrine_society": "Endocrine Society Clinical Practice Guidelines",  # [v8]
-                "chinese":           "Chinese Clinical Guidelines & Expert Consensus",   # [v8]
+                "endocrine_society": "Endocrine Society Clinical Practice Guidelines",
+                "chinese":           "Chinese Clinical Guidelines & Expert Consensus",
             }
             other = [_source_display.get(s.strip().lower(), s.strip().upper())
                      for s in self._guideline_sources
                      if s.strip().lower() not in ("ada",)]
         else:
-            other = []   # 纯 ADA-only 模式，不声明其他来源
+            other = []
 
         return {"ada_years": ada_years, "other": other}
 
@@ -680,7 +568,6 @@ class DiamasRecommendationEngine:
         return ADAGuidelineIndex()
 
     def _build_patient_summary(self, patient_data: Dict, flat: Dict) -> str:
-        """构建 Section 1 患者摘要（含 demographics / 检验 / 用药 / 住院背景）。"""
         lines: List[str] = []
         cm    = patient_data.get("clinical_metrics", {}) or {}
         dq    = patient_data.get("data_quality",     {}) or {}
@@ -762,19 +649,15 @@ class DiamasRecommendationEngine:
         bnp = flat.get("bnp") or flat.get("ntprobnp")
         if bnp: lines.append(f"BNP/NT-proBNP: {bnp:.0f} pg/mL")
 
-        # ── Home medications：区分 DM/并发症相关 vs 其他 ──────────────────────
-        # 问题：prior_medications 包含所有入院前用药（如 Labetalol、镇静剂），
-        # 统一标注为 "Home DM medications" 会误导 LLM 将非 DM 药当作 DM 用药继续。
-        # 修复：按关键词分组，DM/并发症药走第一行（R8/R6 评估），其他走第二行（仅临床背景）。
         _DM_COMP_KW = {
-            # DM 药
+
             "insulin", "metformin", "glipizide", "glimepiride", "glyburide", "glibenclamide",
             "sitagliptin", "linagliptin", "saxagliptin", "alogliptin", "vildagliptin",
             "empagliflozin", "dapagliflozin", "canagliflozin", "ertugliflozin",
             "liraglutide", "semaglutide", "exenatide", "dulaglutide", "tirzepatide",
             "pioglitazone", "rosiglitazone", "repaglinide", "nateglinide",
             "acarbose", "miglitol", "colesevelam", "bromocriptine",
-            # 并发症药（在 COMPLICATION_DRUGS 分类表内）
+
             "atorvastatin", "rosuvastatin", "simvastatin", "pravastatin", "lovastatin",
             "fluvastatin", "pitavastatin", "ezetimibe", "fenofibrate",
             "lisinopril", "enalapril", "ramipril", "benazepril", "captopril", "fosinopril",
@@ -794,7 +677,7 @@ class DiamasRecommendationEngine:
         prior_meds   = patient_data.get("prior_medications")   or []
 
         if home_dm_meds:
-            # 显式 home_dm_medications 字段（一般由提取器精确过滤）
+
             meds_str = "; ".join(str(m) for m in home_dm_meds[:6] if m)
             lines.append(f"Home DM medications: {meds_str or '(not available)'}")
         elif prior_meds:
@@ -815,15 +698,7 @@ class DiamasRecommendationEngine:
 
         return "\n".join(lines)
 
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# DiamasInferencePipeline — 多线程批量推理流水线
-# ═══════════════════════════════════════════════════════════════════════════════
-
 class DiamasInferencePipeline:
-    """
-    Dia-MAS 批量推理流水线（每个入院一个结果文件，支持断点续跑）。
-    """
 
     def __init__(
         self,
@@ -852,7 +727,6 @@ class DiamasInferencePipeline:
         self.num_workers       = num_workers
         self.max_tokens        = max_tokens
 
-        # cohort manifest
         self._manifest: Dict[str, Dict] = {}
         if cohort_manifest_csv and Path(cohort_manifest_csv).exists():
             try:
@@ -865,7 +739,6 @@ class DiamasInferencePipeline:
             except Exception as e:
                 logger.warning(f"cohort_manifest 加载失败: {e}")
 
-        # 引擎初始化
         self.engine = DiamasRecommendationEngine(
             model_name=model_name, temperature=temperature, max_tokens=max_tokens,
             ada_index_path=ada_index_path, ada_guidelines_dir=ada_guidelines_dir,
@@ -875,18 +748,9 @@ class DiamasInferencePipeline:
         )
 
     def _preflight_model_check(self) -> None:
-        """[E3-FAILSAFE] 启动前确认目标模型可用；不可用则立即停机。
-
-        动机：2026-08-26 API 下线 deepseek-v3.2，整批任务跑了数小时全部失败，
-        并写出 8,612 个残缺结果文件。预检把这个代价降到一次请求。
-
-        故意不吞异常：模型不可用是致命配置错误，必须响亮失败（PREREG §0）。
-        """
         from agents.llm_client import DeepseekClient
         from agents.config import BASELINE_MODELS
 
-        # [E3-PREFLIGHT-FIX] model_name / judge 不在 pipeline 上，而在 engine：
-        #   engine.model_name (126) / engine._judge_model (178) / engine._mdt (None ⇒ 不用 judge)
         eng = getattr(self, "engine", None)
         if eng is None:
             raise RuntimeError(f"[E3-FAILSAFE] pipeline 无 engine，无法预检")
@@ -901,7 +765,7 @@ class DiamasInferencePipeline:
 
         client = DeepseekClient()
         for name in names:
-            cfg = BASELINE_MODELS.get(name, {"model_str": name})   # models outside the study list: name as given
+            cfg = BASELINE_MODELS.get(name, {"model_str": name})
             resp = client.chat(
                 messages=[{"role": "user", "content": "ping"}],
                 model=cfg["model_str"], temperature=0.0, max_tokens=8,
@@ -915,8 +779,7 @@ class DiamasInferencePipeline:
             logger.info(f"[E3-FAILSAFE] 模型预检通过: {name}")
 
     def run(self) -> Dict[str, int]:
-        """运行流水线，返回统计信息。"""
-        self._preflight_model_check()                       # [E3-FAILSAFE]
+        self._preflight_model_check()
 
         patient_files = sorted(self.patient_dir.glob("*.json"))
         if not patient_files:
@@ -927,8 +790,6 @@ class DiamasInferencePipeline:
         success  = skipped = failed = 0
         lock     = Lock()
 
-        # canonical_id 去重集合：防止同一病人以不同文件名被双重处理
-        # （符号链接、命名变体：12345_67890.json vs patient_12345_67890.json 等）
         _seen_canonical: set = set()
 
         def process_one(pf: Path):
@@ -937,13 +798,11 @@ class DiamasInferencePipeline:
             patient_id = pf.stem
             out_path   = self.output_dir / f"patient_{patient_id}.json"
 
-            # ── Resume logic（文件级）────────────────────────────────────────
             if self.resume and out_path.exists():
                 with lock:
                     skipped += 1
                 return
 
-            # ── 读取患者数据 ──────────────────────────────────────────────────
             try:
                 with open(pf, encoding="utf-8") as f:
                     patient_data = json.load(f)
@@ -953,7 +812,6 @@ class DiamasInferencePipeline:
                     failed += 1
                 return
 
-            # ── Canonical-ID 去重（内容级）───────────────────────────────────
             sid = str(patient_data.get("subject_id", "")).strip()
             hid = str(patient_data.get("hadm_id",   "")).strip()
             canonical = f"{sid}_{hid}" if (sid and hid) else pf.stem
@@ -967,7 +825,6 @@ class DiamasInferencePipeline:
                     return
                 _seen_canonical.add(canonical)
 
-            # ── 推理 ─────────────────────────────────────────────────────────
             try:
                 manifest_entry = self._manifest.get(patient_id, {})
                 if manifest_entry:
@@ -978,14 +835,6 @@ class DiamasInferencePipeline:
                 result = self.engine.recommend(patient_data)
                 result["patient_id"] = patient_id
 
-                # Bug-2 / [E3-FAILSAFE]: 任何失败都不写文件，保持"未处理"状态，
-                # 下次 --resume 自动重跑。
-                #
-                # 原判据只覆盖 error_message == "parse failed"，而 API 层失败
-                # （404 Invalid model / 401 / 限流耗尽重试）走的是 recommend() 的
-                # 兜底分支，返回 success=False 且 error_message 为异常文本
-                # ⇒ 会被写成残缺结果文件，并被 resume 当作已完成永久顶替。
-                # 2026-08-26 事故实测污染 8,612 个文件。
                 _failed_msg = str(result.get("error_message") or "")
                 if (result.get("success") is False) or (_failed_msg == "parse failed"):
                     _kind = ("parse" if _failed_msg == "parse failed"
@@ -1020,18 +869,12 @@ class DiamasInferencePipeline:
         logger.info(f"完成: total={total}, success={success}, skipped={skipped}, failed={failed}")
         return {"total": total, "success": success, "skipped": skipped, "failed": failed}
 
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# CLI
-# ═══════════════════════════════════════════════════════════════════════════════
-
 PROGRAMS = {
-    # Single: endocrinology agent only, ADA evidence only
+
     "single":        {"use_mdt": False, "sources": ["ada"]},
-    # Collaborative: adds eligible nephrology and cardiology agents with their own guideline sources
+
     "collaborative": {"use_mdt": True,  "sources": ["ada", "ada_supplements", "kdigo", "esc", "acc_aha"]},
 }
-
 
 def main():
     import argparse
@@ -1075,7 +918,6 @@ def main():
         max_debate_rounds   = args.debate_rounds,
     )
     print(pipeline.run())
-
 
 if __name__ == "__main__":
     main()
