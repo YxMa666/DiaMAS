@@ -304,15 +304,6 @@ class DiamasRecommendationEngine:
             # Step 8: 解析输出 (v7: 单模式 + complication_drugs)
             recommended_drugs, complication_drugs, reasoning, excluded = self._parse_response(response_text)
 
-            # Bug-6: 合并并发症药到 recommended_drugs，与旧版 baseline 格式兼容（评估流水线只读该字段）
-            # MDT 激活时用仲裁后的 mdt_final_complication_drugs，否则用单模型 complication_drugs
-            # [v18 P2] 取消"MDT 激活时整体替换"。原逻辑令 A2 的并发症药直接取自专科仲裁，
-            # 而 _SPECIALTY_COMPLICATION_CATS 把 Antiplatelet / Lipid_Statins /
-            # BetaBlockers 独占挂在 cardiology 名下 ⇒ 心内科未激活的患者结构性开不出这些药。
-            # arm_asymmetry(b)：心内科缺席层 Lipid_Statins Δ=−75.4pp(test)/−75.9pp(seed)，
-            # BetaBlockers −24.4/−18.7；Antiplatelet 两层均 ≈−20pp。
-            # 改为两臂统一由共享合成 LLM 产出；MDT 结论经 mdt_summary 注入 prompt 仍然生效，
-            # mdt_final_complication_drugs 继续落盘，可事后算「MDT 建议采纳率」。
             _comp_source = complication_drugs or []
             _seen_names = {
                 str(d.get("drug", "") if isinstance(d, dict) else d).strip().lower()
