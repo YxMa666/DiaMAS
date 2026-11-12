@@ -611,15 +611,7 @@ class DiamasRecommendationEngine:
         if self.retriever.ada_index and self.retriever.ada_index.by_year:
             ada_years = sorted(self.retriever.ada_index.by_year.keys())
 
-        # ── [v18 P1a] 按患者生成来源声明 ──────────────────────────────────
-        # 原实现按**启动配置**生成，对每个患者恒定：A1 声明 1 源、A2 声明 5 源，
-        # 构成一处覆盖 100% 患者（含未激活者）的臂间非对称。
-        # arm_asymmetry(b) 实测未激活组 ACEi Δ=−9.7pp [−13.3,−5.9]，下行合计 −19.4pp；
-        # prompt_render_probe(p1) 逐字符证实这是未激活组两臂唯一的 build() 输入差异，
-        # 且按患者生成后 25/25 例逐字符相同、A1 侧渲染 0/40 例改变。
-        # 副作用（预期）：Section 3 不再为"已声明但本患者无命中"的源渲染占位块；
-        # 该信息可由 activated_specialties × SPECIALTY_SOURCE_ROUTING 与
-        # evidence_sources_effective 的差集事后完整还原，无需进入 prompt。
+
         _SRC_DISPLAY_V18 = {
             "kdigo":             "KDIGO CKD Guidelines",
             "esc":               "ESC CVD in Diabetes Guidelines",
