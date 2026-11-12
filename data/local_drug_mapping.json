@@ -1,0 +1,3103 @@
+{
+  "metoclopramide hcl": {
+    "original_name": "METOCLOPRAMIDE HCL",
+    "mapped_name": "Metoclopramide",
+    "drug_category": "Gastroparesis",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirin ec": {
+    "original_name": "ASPIRIN EC",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "glucagen": {
+    "original_name": "GLUCAGEN",
+    "mapped_name": "Glucagon",
+    "drug_category": "Hypoglycemia_Rescue",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemide sso": {
+    "original_name": "Furosemide SSO",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "amitriptyline hcl": {
+    "original_name": "Amitriptyline HCl",
+    "mapped_name": "Amitriptyline",
+    "drug_category": "Neuropathy_TCA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "pioglitazone hcl": {
+    "original_name": "Pioglitazone HCl",
+    "mapped_name": "Pioglitazone",
+    "drug_category": "Thiazolidinediones",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "enalaprilat": {
+    "original_name": "Enalaprilat",
+    "mapped_name": "Enalapril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "glyburi": {
+    "original_name": "GlyBURI",
+    "mapped_name": "Glyburide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "diltiaz": {
+    "original_name": "Diltiaz",
+    "mapped_name": "Diltiazem",
+    "drug_category": "Hypertension_CCB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "gabapen": {
+    "original_name": "Gabapen",
+    "mapped_name": "Gabapentin",
+    "drug_category": "Neuropathy_Gabapentinoids",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metform": {
+    "original_name": "MetFORM",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "imipramine hcl": {
+    "original_name": "Imipramine HCl",
+    "mapped_name": "Imipramine",
+    "drug_category": "Neuropathy_TCA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "benazepril hcl": {
+    "original_name": "benazepril HCl",
+    "mapped_name": "Benazepril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformi": {
+    "original_name": "MetFORMI",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "cilosta": {
+    "original_name": "cilosta",
+    "mapped_name": "Cilostazol",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "inv-atorvastatin": {
+    "original_name": "INV-Atorvastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "cilostaz": {
+    "original_name": "Cilostaz",
+    "mapped_name": "Cilostazol",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosuvastati": {
+    "original_name": "Rosuvastati",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "cangrelor": {
+    "original_name": "Cangrelor",
+    "mapped_name": "Ticagrelor",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspiri": {
+    "original_name": "Aspiri",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "protriptyline": {
+    "original_name": "protriptyline",
+    "mapped_name": "Nortriptyline",
+    "drug_category": "Neuropathy_TCA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisopro": {
+    "original_name": "bisopro",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "pregaba": {
+    "original_name": "Pregaba",
+    "mapped_name": "Pregabalin",
+    "drug_category": "Neuropathy_Gabapentinoids",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "neometoclopramide": {
+    "original_name": "NEOMetoclopramide",
+    "mapped_name": "Metoclopramide",
+    "drug_category": "Gastroparesis",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "domperidon": {
+    "original_name": "DOMPERIDON",
+    "mapped_name": "Domperidone",
+    "drug_category": "Gastroparesis",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "停用 lisinopril": {
+    "original_name": "停用 Lisinopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "停止 furosemide": {
+    "original_name": "停止 Furosemide",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisnopril": {
+    "original_name": "Lisnopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "暂停 metformin": {
+    "original_name": "暂停 Metformin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "暂停 losartan": {
+    "original_name": "暂停 Losartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinospril": {
+    "original_name": "Lisinospril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "暂停 simvastatin": {
+    "original_name": "暂停 Simvastatin",
+    "mapped_name": "Simvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisagliptin": {
+    "original_name": "Lisagliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semagliflozina": {
+    "original_name": "Semagliflozina",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisiniopril": {
+    "original_name": "Lisiniopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "暂停 glipizide": {
+    "original_name": "暂停 GlipizIDE",
+    "mapped_name": "Glipizide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinuopril": {
+    "original_name": "Lisinuopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisartan": {
+    "original_name": "Lisartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoppril": {
+    "original_name": "Lisinoppril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinvopril": {
+    "original_name": "Lisinvopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisininopril": {
+    "original_name": "Lisininopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lispril": {
+    "original_name": "Lispril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinupril": {
+    "original_name": "Lisinupril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifoxzin": {
+    "original_name": "Empaglifoxzin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glarg": {
+    "original_name": "Insulin glarg",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisino pril": {
+    "original_name": "Lisino pril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifrozin": {
+    "original_name": "Empaglifrozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoipril": {
+    "original_name": "Lisinoipril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinstopril": {
+    "original_name": "Lisinstopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "停用glipizide": {
+    "original_name": "停用GlipizIDE",
+    "mapped_name": "Glipizide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglifloozin": {
+    "original_name": "Dapaglifloozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linaglipt": {
+    "original_name": "Linaglipt",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinvastatin": {
+    "original_name": "Lisinvastatin",
+    "mapped_name": "Simvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorastatin": {
+    "original_name": "Atorastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinaropril": {
+    "original_name": "Lisinaropril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifbozin": {
+    "original_name": "Empaglifbozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisopril": {
+    "original_name": "Lisopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifcozin": {
+    "original_name": "Empaglifcozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifolozen": {
+    "original_name": "Empaglifolozen",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifloin": {
+    "original_name": "Empaglifloin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisipinopril": {
+    "original_name": "Lisipinopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lis inopril": {
+    "original_name": "Lis inopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisino-pril": {
+    "original_name": "Lisino-pril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinolpril": {
+    "original_name": "Lisinolpril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"carvedilol": {
+    "original_name": "\"Carvedilol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformlin": {
+    "original_name": "Metformlin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglut": {
+    "original_name": "Semaglut",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglide": {
+    "original_name": "Semaglide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprollol": {
+    "original_name": "Metoprollol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglutida": {
+    "original_name": "Liraglutida",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirinin": {
+    "original_name": "Aspirinin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformim": {
+    "original_name": "Metformim",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglut tide": {
+    "original_name": "Liraglut tide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprol": {
+    "original_name": "Metoprol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglflozin": {
+    "original_name": "Dapaglflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspir": {
+    "original_name": "Aspir",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvedledilol": {
+    "original_name": "Carvedledilol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformmin": {
+    "original_name": "Metformmin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramipipril": {
+    "original_name": "Ramipipril",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspiririn": {
+    "original_name": "Aspiririn",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linagliliptin": {
+    "original_name": "Linagliliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulinegludec": {
+    "original_name": "Insulinegludec",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirrin": {
+    "original_name": "Aspirrin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramippril": {
+    "original_name": "Ramippril",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprololol": {
+    "original_name": "Metoprololol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopopril": {
+    "original_name": "Lisinopopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglutid": {
+    "original_name": "Liraglutid",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprol:ol": {
+    "original_name": "Metoprol:ol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflolin": {
+    "original_name": "Dapagliflolin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastin": {
+    "original_name": "Atorvastin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopil": {
+    "original_name": "Lisinopil",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carveddilol": {
+    "original_name": "Carveddilol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramiplil": {
+    "original_name": "Ramiplil",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagliflo": {
+    "original_name": "Empagliflo",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"aspirin": {
+    "original_name": "\"Aspirin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinop-pril": {
+    "original_name": "Lisinop-pril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvaststatin": {
+    "original_name": "Atorvaststatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosuvastatine": {
+    "original_name": "Rosuvastatine",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirine": {
+    "original_name": "Aspirine",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagliflolozin": {
+    "original_name": "Empagliflolozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopuaril": {
+    "original_name": "Lisinopuaril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastastatin": {
+    "original_name": "Atorvastastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirinrel": {
+    "original_name": "Aspirinrel",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflozinin": {
+    "original_name": "Dapagliflozinin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin degegludec": {
+    "original_name": "Insulin degegludec",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramipopril": {
+    "original_name": "Ramipopril",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinop": {
+    "original_name": "Lisinop",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvededilol": {
+    "original_name": "Carvededilol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglifloin": {
+    "original_name": "Dapaglifloin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifloozin": {
+    "original_name": "Empaglifloozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflolozin": {
+    "original_name": "Dapagliflolozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirinn": {
+    "original_name": "Aspirinn",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglutid": {
+    "original_name": "Semaglutid",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glargin": {
+    "original_name": "Insulin Glargin",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglutlutide": {
+    "original_name": "Semaglutlutide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramipil": {
+    "original_name": "Ramipil",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sitaglilin": {
+    "original_name": "Sitaglilin",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglflzin": {
+    "original_name": "Dapaglflzin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflo": {
+    "original_name": "Dapagliflo",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoproll": {
+    "original_name": "Metoproll",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvedimolol": {
+    "original_name": "Carvedimolol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "orvastatin": {
+    "original_name": "orvastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvedidol": {
+    "original_name": "Carvedidol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dpasagliflozin": {
+    "original_name": "Dpasagliflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirn": {
+    "original_name": "Aspirn",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "irbesartran": {
+    "original_name": "Irbesartran",
+    "mapped_name": "Irbesartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirin*": {
+    "original_name": "Aspirin*",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisoprol6": {
+    "original_name": "Bisoprol6",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglututide": {
+    "original_name": "Semaglututide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "uaglutide": {
+    "original_name": "uaglutide",
+    "mapped_name": "Dulaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "polyethylene glycol powder": {
+    "original_name": "Polyethylene glycol powder",
+    "mapped_name": "Polyethylene glycol loxenatide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ticagrelrelor": {
+    "original_name": "Ticagrelrelor",
+    "mapped_name": "Ticagrelor",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirinolactone": {
+    "original_name": "Aspirinolactone",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semagllutide": {
+    "original_name": "Semagllutide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosuvstatin": {
+    "original_name": "Rosuvstatin",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglututide": {
+    "original_name": "Liraglututide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "irbbesartan": {
+    "original_name": "Irbbesartan",
+    "mapped_name": "Irbesartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifflozin": {
+    "original_name": "Empaglifflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformolin": {
+    "original_name": "Metformolin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ros vastatin": {
+    "original_name": "Ros vastatin",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metform尔min": {
+    "original_name": "Metform尔min",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "osuvastatin": {
+    "original_name": "osuvastatin",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dulaglutitude": {
+    "original_name": "Dulaglutitude",
+    "mapped_name": "Dulaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisogliptin": {
+    "original_name": "Lisogliptin",
+    "mapped_name": "Alogliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosem": {
+    "original_name": "Furosem",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "captopopril": {
+    "original_name": "Captopopril",
+    "mapped_name": "Captopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lingliptin": {
+    "original_name": "Lingliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifzin": {
+    "original_name": "Empaglifzin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosatatin": {
+    "original_name": "Rosatatin",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvstatine": {
+    "original_name": "Atorvstatine",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglliflozin": {
+    "original_name": "Dapaglliflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopavil": {
+    "original_name": "Lisinopavil",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramiprili": {
+    "original_name": "Ramiprili",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisoprollol": {
+    "original_name": "Bisoprollol",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisopoprolol": {
+    "original_name": "Bisopoprolol",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "opidogrel": {
+    "original_name": "opidogrel",
+    "mapped_name": "Clopidogrel",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metopixolol": {
+    "original_name": "MetopIXolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglifflozin": {
+    "original_name": "Dapaglifflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sitaggliptin": {
+    "original_name": "SitagGLIPTIN",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspiritin": {
+    "original_name": "Aspiritin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linaglipton": {
+    "original_name": "Linaglipton",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glargi": {
+    "original_name": "Insulin glargi",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastati": {
+    "original_name": "Atorvastati",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirinec": {
+    "original_name": "AspirinEC",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatine": {
+    "original_name": "Atorvastatine",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirlin": {
+    "original_name": "Aspirlin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifloflozin": {
+    "original_name": "Empaglifloflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"atorvastatin": {
+    "original_name": "\"Atorvastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lozartan": {
+    "original_name": "Lozartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glaglarine": {
+    "original_name": "Insulin glaglarine",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin gludec": {
+    "original_name": "Insulin gludec",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvedolol": {
+    "original_name": "Carvedolol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin degcodec": {
+    "original_name": "Insulin degcodec",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liragllutide": {
+    "original_name": "Liragllutide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformine": {
+    "original_name": "Metformine",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglut0e": {
+    "original_name": "Semaglut0e",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopill": {
+    "original_name": "Lisinopill",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "losogliptin": {
+    "original_name": "Losogliptin",
+    "mapped_name": "Gosogliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "zetimibe": {
+    "original_name": "zetimibe",
+    "mapped_name": "Ezetimibe",
+    "drug_category": "Lipid_NonStatins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liragl堵tide": {
+    "original_name": "Liragl堵tide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ticagrel": {
+    "original_name": "Ticagrel",
+    "mapped_name": "Ticagrelor",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "eatorvastatin": {
+    "original_name": "Eatorvastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sitagliptan": {
+    "original_name": "Sitagliptan",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"losartan": {
+    "original_name": "\"Losartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglutptide": {
+    "original_name": "Liraglutptide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linagliotin": {
+    "original_name": "Linagliotin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirip": {
+    "original_name": "Aspirip",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoperril": {
+    "original_name": "Lisinoperril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopili": {
+    "original_name": "Lisinopili",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "fsemide": {
+    "original_name": "Fsemide",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisoproll": {
+    "original_name": "Bisoproll",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin degemir": {
+    "original_name": "Insulin degemir",
+    "mapped_name": "Insulin detemir",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "mpagliflozin": {
+    "original_name": "mpagliflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "clopgidogrel": {
+    "original_name": "Clopgidogrel",
+    "mapped_name": "Clopidogrel",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carved-dilol": {
+    "original_name": "Carved-dilol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopipril": {
+    "original_name": "Lisinopipril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglotide": {
+    "original_name": "Liraglotide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopilo": {
+    "original_name": "Lisinopilo",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"metoprolol": {
+    "original_name": "\"Metoprolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "l losartan": {
+    "original_name": "L Losartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sitaglipt": {
+    "original_name": "Sitaglipt",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvstatin": {
+    "original_name": "Atorvstatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"metformin": {
+    "original_name": "\"Metformin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"sitagliptin": {
+    "original_name": "\"Sitagliptin",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosuvastatina": {
+    "original_name": "Rosuvastatina",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosamide": {
+    "original_name": "Furosamide",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin degludac": {
+    "original_name": "Insulin degludac",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolacton": {
+    "original_name": "Spironolacton",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulinuman": {
+    "original_name": "Insulinuman",
+    "mapped_name": "Insulin human",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisoprol": {
+    "original_name": "Bisoprol",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglifloine": {
+    "original_name": "Dapaglifloine",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflozine": {
+    "original_name": "Dapagliflozine",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "pravaststatin": {
+    "original_name": "Pravaststatin",
+    "mapped_name": "Pravastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"pravastatin": {
+    "original_name": "\"Pravastatin",
+    "mapped_name": "Pravastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linagliriptin": {
+    "original_name": "Linagliriptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lartan": {
+    "original_name": "Lartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "inagliptin": {
+    "original_name": "inagliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "mesartan": {
+    "original_name": "mesartan",
+    "mapped_name": "Olmesartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoparin": {
+    "original_name": "Lisinoparin",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformrmin": {
+    "original_name": "Metformrmin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglitide": {
+    "original_name": "Semaglitide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformn": {
+    "original_name": "Metformn",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosuvastatain": {
+    "original_name": "Rosuvastatain",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spiroolactone": {
+    "original_name": "Spiroolactone",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"bisoprolol": {
+    "original_name": "\"Bisoprolol",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "irbagliflozin": {
+    "original_name": "Irbagliflozin",
+    "mapped_name": "Ipragliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin degivudec": {
+    "original_name": "Insulin degivudec",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ticagrelol": {
+    "original_name": "Ticagrelol",
+    "mapped_name": "Ticagrelor",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglliflozin": {
+    "original_name": "Empaglliflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"lisinopril": {
+    "original_name": "\"Lisinopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"rosuvastatin": {
+    "original_name": "\"Rosuvastatin",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatain": {
+    "original_name": "Atorvastatain",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformin)": {
+    "original_name": "Metformin)",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagliflozin)": {
+    "original_name": "Empagliflozin)",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sitagliptin)": {
+    "original_name": "Sitagliptin)",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopril)": {
+    "original_name": "Lisinopril)",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatin)": {
+    "original_name": "Atorvastatin)",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "amlodipline": {
+    "original_name": "Amlodipline",
+    "mapped_name": "Levamlodipine",
+    "drug_category": "Hypertension_CCB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semeglutide": {
+    "original_name": "Semeglutide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvedlol": {
+    "original_name": "Carvedlol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglut": {
+    "original_name": "Liraglut",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirinone": {
+    "original_name": "Aspirinone",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "rosuvastatatin": {
+    "original_name": "Rosuvastatatin",
+    "mapped_name": "Rosuvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramiprilil": {
+    "original_name": "Ramiprilil",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "finerenene": {
+    "original_name": "Finerenene",
+    "mapped_name": "Finerenone",
+    "drug_category": "CKD_MRA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liragludenatide": {
+    "original_name": "Liragludenatide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolacttone": {
+    "original_name": "Spironolacttone",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglutin": {
+    "original_name": "Semaglutin",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoprim": {
+    "original_name": "Lisinoprim",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glargide": {
+    "original_name": "Insulin glargide",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramipíril": {
+    "original_name": "Ramipíril",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformormin": {
+    "original_name": "Metformormin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bisoprolo": {
+    "original_name": "Bisoprolo",
+    "mapped_name": "Bisoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"linagliptin": {
+    "original_name": "\"Linagliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glagine": {
+    "original_name": "Insulin glagine",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "finerenence": {
+    "original_name": "Finerenence",
+    "mapped_name": "Finerenone",
+    "drug_category": "CKD_MRA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "f拳fenofibrate": {
+    "original_name": "F拳Fenofibrate",
+    "mapped_name": "Fenofibrate",
+    "drug_category": "Lipid_NonStatins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "andesartan": {
+    "original_name": "andesartan",
+    "mapped_name": "Candesartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglutiide": {
+    "original_name": "Liraglutiide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linsagliptin": {
+    "original_name": "Linsagliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprolilol": {
+    "original_name": "Metoprolilol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagliflozinin": {
+    "original_name": "Empagliflozinin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflooin": {
+    "original_name": "Dapagliflooin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "pironolactone": {
+    "original_name": "pironolactone",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformide": {
+    "original_name": "Metformide",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin lisspro": {
+    "original_name": "Insulin lisSpro",
+    "mapped_name": "Insulin lispro",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glargmic": {
+    "original_name": "Insulin glargmic",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagllozin": {
+    "original_name": "Dapagllozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "agliptin": {
+    "original_name": "agliptin",
+    "mapped_name": "Anagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semagltide": {
+    "original_name": "SemaglTiDe",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramicpril": {
+    "original_name": "Ramicpril",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "mettformin": {
+    "original_name": "Mettformin",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin as part": {
+    "original_name": "Insulin as part",
+    "mapped_name": "Insulin aspart",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin deglude": {
+    "original_name": "Insulin deglude",
+    "mapped_name": "Insulin degludec",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glgine": {
+    "original_name": "Insulin glgine",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapagliflozin（已列）": {
+    "original_name": "Dapagliflozin（已列）",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprolril": {
+    "original_name": "Metoprolril",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carveddiol": {
+    "original_name": "Carveddiol",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semaglutidede": {
+    "original_name": "Semaglutidede",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "captoptoril": {
+    "original_name": "Captoptoril",
+    "mapped_name": "Captopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liraglutin": {
+    "original_name": "Liraglutin",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "enalapopril": {
+    "original_name": "Enalapopril",
+    "mapped_name": "Enalapril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ezelimibe": {
+    "original_name": "Ezelimibe",
+    "mapped_name": "Ezetimibe",
+    "drug_category": "Lipid_NonStatins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprolrilol": {
+    "original_name": "Metoprolrilol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aaspirin": {
+    "original_name": "AAspirin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "osartan": {
+    "original_name": "osartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorstatine": {
+    "original_name": "Atorstatine",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifloz in": {
+    "original_name": "Empaglifloz in",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "vasartan": {
+    "original_name": "Vasartan",
+    "mapped_name": "Valsartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atoratatin": {
+    "original_name": "Atoratatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "alsartan": {
+    "original_name": "alsartan",
+    "mapped_name": "Valsartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprolil": {
+    "original_name": "Metoprolil",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "eezetimibe": {
+    "original_name": "Eezetimibe",
+    "mapped_name": "Ezetimibe",
+    "drug_category": "Lipid_NonStatins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirpirin": {
+    "original_name": "Aspirpirin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapanogliflozin": {
+    "original_name": "Dapanogliflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolactone”": {
+    "original_name": "Spironolactone”",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemine": {
+    "original_name": "Furosemine",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprimolol": {
+    "original_name": "Metoprimolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dapaglloflozin": {
+    "original_name": "Dapaglloflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformolol": {
+    "original_name": "Metformolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sitovastatin": {
+    "original_name": "Sitovastatin",
+    "mapped_name": "Simvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"dulaglutide": {
+    "original_name": "\"Dulaglutide",
+    "mapped_name": "Dulaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastine": {
+    "original_name": "Atorvastine",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "fenofbrate": {
+    "original_name": "Fenofbrate",
+    "mapped_name": "Fenofibrate",
+    "drug_category": "Lipid_NonStatins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sem semaglutide": {
+    "original_name": "Sem Semaglutide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoprel": {
+    "original_name": "Lisinoprel",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "clop⌘ogrel": {
+    "original_name": "Clop⌘ogrel",
+    "mapped_name": "Clopidogrel",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furoside": {
+    "original_name": "Furoside",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolact": {
+    "original_name": "Spironolact",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifloide": {
+    "original_name": "Empaglifloide",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "liglutide": {
+    "original_name": "Liglutide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "nonfenofibrate": {
+    "original_name": "Nonfenofibrate",
+    "mapped_name": "Fenofibrate",
+    "drug_category": "Lipid_NonStatins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "cobalamin": {
+    "original_name": "Cobalamin",
+    "mapped_name": "Mecobalamin",
+    "drug_category": "Neuropathy_Others",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linzaglutide": {
+    "original_name": "Linzaglutide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisreglutide": {
+    "original_name": "Lisreglutide",
+    "mapped_name": "Liraglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ezrapeglenatide": {
+    "original_name": "Ezrapeglenatide",
+    "mapped_name": "Efpeglenatide",
+    "drug_category": "GLP1_Multimer_RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "methylcobalamin": {
+    "original_name": "Methylcobalamin",
+    "mapped_name": "Mecobalamin",
+    "drug_category": "Neuropathy_Others",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "irbestartan": {
+    "original_name": "Irbestartan",
+    "mapped_name": "Irbesartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semagliflozin": {
+    "original_name": "Semagliflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ramilipril": {
+    "original_name": "Ramilipril",
+    "mapped_name": "Ramipril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spirolactone": {
+    "original_name": "Spirolactone",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "epeglintide": {
+    "original_name": "Epeglintide",
+    "mapped_name": "Efpeglenatide",
+    "drug_category": "GLP1_Multimer_RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "dagliflozin": {
+    "original_name": "Dagliflozin",
+    "mapped_name": "Dapagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "epirbesartan": {
+    "original_name": "Epirbesartan",
+    "mapped_name": "Irbesartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "val sartan": {
+    "original_name": "Val sartan",
+    "mapped_name": "Valsartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "val orsartan": {
+    "original_name": "Val orsartan",
+    "mapped_name": "Valsartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin glarg!ine": {
+    "original_name": "Insulin glarg!ine",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "停止 glyburide": {
+    "original_name": "停止 GlyBURIDE",
+    "mapped_name": "Glyburide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "调整 lisinopril": {
+    "original_name": "调整 Lisinopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linagliptide": {
+    "original_name": "Linagliptide",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "regular human insulin": {
+    "original_name": "Regular human insulin",
+    "mapped_name": "Regular insulin",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin asparagin": {
+    "original_name": "Insulin asparagin",
+    "mapped_name": "Insulin aspart",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirin po": {
+    "original_name": "Aspirin PO",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatin 40": {
+    "original_name": "Atorvastatin 40",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "停用 glipizide": {
+    "original_name": "停用 GlipiZIDE",
+    "mapped_name": "Glipizide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "semagliflozine": {
+    "original_name": "Semagliflozine",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lin!agliptin": {
+    "original_name": "Lin!agliptin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolone": {
+    "original_name": "Spironolone",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "met!oprolol": {
+    "original_name": "Met!oprolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empaglifliflozin": {
+    "original_name": "Empaglifliflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "gabapentin po": {
+    "original_name": "Gabapentin PO",
+    "mapped_name": "Gabapentin",
+    "drug_category": "Neuropathy_Gabapentinoids",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "gabapentinoids": {
+    "original_name": "Gabapentinoids",
+    "mapped_name": "Gabapentin",
+    "drug_category": "Neuropathy_Gabapentinoids",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "colosevelam": {
+    "original_name": "Colosevelam",
+    "mapped_name": "Colesevelam",
+    "drug_category": "Bile_Acid_Sequestrants_DM",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "meclopramide": {
+    "original_name": "Meclopramide",
+    "mapped_name": "Metoclopramide",
+    "drug_category": "Gastroparesis",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "!losartan": {
+    "original_name": "!Losartan",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "perind!opril": {
+    "original_name": "Perind!opril",
+    "mapped_name": "Perindopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "valsarten": {
+    "original_name": "Valsarten",
+    "mapped_name": "Valsartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "!aspirin": {
+    "original_name": "!Aspirin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "pregab!abalin": {
+    "original_name": "Pregab!abalin",
+    "mapped_name": "Pregabalin",
+    "drug_category": "Neuropathy_Gabapentinoids",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopril po": {
+    "original_name": "LISINOPRIL PO",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprolol po": {
+    "original_name": "METOPROLOL PO",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatin po": {
+    "original_name": "ATORVASTATIN PO",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemide po": {
+    "original_name": "FUROSEMIDE PO",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "pravastatin po": {
+    "original_name": "PRAVASTATIN PO",
+    "mapped_name": "Pravastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "simvastatin po": {
+    "original_name": "SIMVASTATIN PO",
+    "mapped_name": "Simvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "losartan po": {
+    "original_name": "LOSARTAN PO",
+    "mapped_name": "Losartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolactone po": {
+    "original_name": "SPIRONOLACTONE PO",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "carvedilol po": {
+    "original_name": "CARVEDILOL PO",
+    "mapped_name": "Carvedilol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ticagrelor po": {
+    "original_name": "TICAGRELOR PO",
+    "mapped_name": "Ticagrelor",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisineptril": {
+    "original_name": "Lisineptril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "linzaglitpin": {
+    "original_name": "Linzaglitpin",
+    "mapped_name": "Linagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinepri": {
+    "original_name": "Lisinepri",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "erosartan": {
+    "original_name": "Erosartan",
+    "mapped_name": "Eprosartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagliflo!zin": {
+    "original_name": "Empagliflo!zin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "!ticagrelor": {
+    "original_name": "!Ticagrelor",
+    "mapped_name": "Ticagrelor",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulins_unspecified": {
+    "original_name": "Insulins_Unspecified",
+    "mapped_name": "Insulin (unspecified)",
+    "drug_category": "Insulins_Unspecified",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinepril": {
+    "original_name": "Lisinepril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin_unspecified": {
+    "original_name": "Insulin_Unspecified",
+    "mapped_name": "Insulin (unspecified)",
+    "drug_category": "Insulins_Unspecified",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "sempaglutide": {
+    "original_name": "Sempaglutide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metoprolo": {
+    "original_name": "Metoprolo",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "glipizid": {
+    "original_name": "GlipiZID",
+    "mapped_name": "Glipizide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "glyburid": {
+    "original_name": "Glyburid",
+    "mapped_name": "Glyburide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "valsarta": {
+    "original_name": "Valsarta",
+    "mapped_name": "Valsartan",
+    "drug_category": "Hypertension_ARB",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemi": {
+    "original_name": "Furosemi",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin lispart": {
+    "original_name": "Insulin lispart",
+    "mapped_name": "Insulin lispro",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "s#itagliptin#": {
+    "original_name": "S#itagliptin#",
+    "mapped_name": "Sitagliptin",
+    "drug_category": "DPP-4i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "glucagon!on": {
+    "original_name": "Glucagon!on",
+    "mapped_name": "Glucagon",
+    "drug_category": "Hypoglycemia_Rescue",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "!metoprolol": {
+    "original_name": "!Metoprolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "fotagliflozin": {
+    "original_name": "Fotagliflozin",
+    "mapped_name": "Sotagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ticagliflozin": {
+    "original_name": "Ticagliflozin",
+    "mapped_name": "Sotagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ezalrestat": {
+    "original_name": "Ezalrestat",
+    "mapped_name": "Epalrestat",
+    "drug_category": "Neuropathy_Others",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "!semaglutide": {
+    "original_name": "!Semaglutide",
+    "mapped_name": "Semaglutide",
+    "drug_category": "GLP-1RA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirin 75": {
+    "original_name": "Aspirin 75",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin unspecified": {
+    "original_name": "Insulin unspecified",
+    "mapped_name": "Insulin (unspecified)",
+    "drug_category": "Insulins_Unspecified",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopiril": {
+    "original_name": "LISINOPIRIL",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulina glargina": {
+    "original_name": "Insulina Glargina",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "fursemide": {
+    "original_name": "FURSEMIDE",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatina": {
+    "original_name": "Atorvastatina",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"furosemide": {
+    "original_name": "\"Furosemide",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinopirl": {
+    "original_name": "LISINOPIRL",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atoravastatin": {
+    "original_name": "Atoravastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ataptopril": {
+    "original_name": "Ataptopril",
+    "mapped_name": "Captopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvavastatin": {
+    "original_name": "Atorvavastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvaastatin": {
+    "original_name": "Atorvaastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirina": {
+    "original_name": "Aspirina",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atoruvastatin": {
+    "original_name": "Atoruvastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "fliclazide": {
+    "original_name": "Fliclazide",
+    "mapped_name": "Gliclazide",
+    "drug_category": "Sulfonylureas",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metocpramide": {
+    "original_name": "Metocpramide",
+    "mapped_name": "Metoclopramide",
+    "drug_category": "Gastroparesis",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinpril": {
+    "original_name": "Lisinpril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorovastatin": {
+    "original_name": "Atorovastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metopolol": {
+    "original_name": "Metopolol",
+    "mapped_name": "Metoprolol",
+    "drug_category": "Hypertension_BetaBlockers",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin deitemir": {
+    "original_name": "INSULIN DEITEMIR",
+    "mapped_name": "Insulin detemir",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatin\"": {
+    "original_name": "Atorvastatin\"",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinapril": {
+    "original_name": "Lisinapril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemida": {
+    "original_name": "Furosemida",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin desemir": {
+    "original_name": "INSULIN DESEMIR",
+    "mapped_name": "Insulin detemir",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "bumetananide": {
+    "original_name": "Bumetananide",
+    "mapped_name": "Bumetanide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "d duloxetine": {
+    "original_name": "D Duloxetine",
+    "mapped_name": "Duloxetine",
+    "drug_category": "Neuropathy_SNRI",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insuline glaargine": {
+    "original_name": "Insuline Glaargine",
+    "mapped_name": "Insulin glargine",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin de temir": {
+    "original_name": "INSULIN DE TEMIR",
+    "mapped_name": "Insulin detemir",
+    "drug_category": "Insulins_Basal",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulin aspnrtn": {
+    "original_name": "Insulin Aspnrtn",
+    "mapped_name": "Insulin aspart",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinoprilril": {
+    "original_name": "Lisinoprilril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metformina": {
+    "original_name": "Metformina",
+    "mapped_name": "Metformin",
+    "drug_category": "Biguanides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvavaststatin": {
+    "original_name": "AtorvavastStatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvatatin": {
+    "original_name": "Atorvatatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "metocloopramide": {
+    "original_name": "Metocloopramide",
+    "mapped_name": "Metoclopramide",
+    "drug_category": "Gastroparesis",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atumetanide": {
+    "original_name": "Atumetanide",
+    "mapped_name": "Bumetanide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "aspirin\"": {
+    "original_name": "Aspirin\"",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvastatinin": {
+    "original_name": "Atorvastatinin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atorvvasatin": {
+    "original_name": "Atorvvasatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemamide": {
+    "original_name": "Furosemamide",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atrovastatin": {
+    "original_name": "Atrovastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "insulina glulisina": {
+    "original_name": "Insulina Glulisina",
+    "mapped_name": "Insulin glulisine",
+    "drug_category": "Insulins_Rapid",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisina pril": {
+    "original_name": "Lisina pril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagagliflozin": {
+    "original_name": "Empagagliflozin",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "eplerplerenone": {
+    "original_name": "Eplerplerenone",
+    "mapped_name": "Eplerenone",
+    "drug_category": "CKD_MRA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "eplerenone\"": {
+    "original_name": "Eplerenone\"",
+    "mapped_name": "Eplerenone",
+    "drug_category": "CKD_MRA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "lisinnopril": {
+    "original_name": "Lisinnopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagliflozine": {
+    "original_name": "Empagliflozine",
+    "mapped_name": "Empagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atpirin": {
+    "original_name": "Atpirin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"duloxetine": {
+    "original_name": "\"Duloxetine",
+    "mapped_name": "Duloxetine",
+    "drug_category": "Neuropathy_SNRI",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "canaglifloozin": {
+    "original_name": "Canaglifloozin",
+    "mapped_name": "Canagliflozin",
+    "drug_category": "SGLT2i",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "spironolactone\"": {
+    "original_name": "Spironolactone\"",
+    "mapped_name": "Spironolactone",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "l. aspirin": {
+    "original_name": "L. Aspirin",
+    "mapped_name": "Aspirin",
+    "drug_category": "Antiplatelet",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"pregabalin": {
+    "original_name": "\"Pregabalin",
+    "mapped_name": "Pregabalin",
+    "drug_category": "Neuropathy_Gabapentinoids",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "f-duloxetine": {
+    "original_name": "F-Duloxetine",
+    "mapped_name": "Duloxetine",
+    "drug_category": "Neuropathy_SNRI",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "furosemmide": {
+    "original_name": "Furosemmide",
+    "mapped_name": "Furosemide",
+    "drug_category": "Hypertension_Diuretics",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "doxetine": {
+    "original_name": "Doxetine",
+    "mapped_name": "Duloxetine",
+    "drug_category": "Neuropathy_SNRI",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "\"eplerenone": {
+    "original_name": "\"Eplerenone",
+    "mapped_name": "Eplerenone",
+    "drug_category": "CKD_MRA",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "atevastatin": {
+    "original_name": "Atevastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "l-lisinopril": {
+    "original_name": "L-Lisinopril",
+    "mapped_name": "Lisinopril",
+    "drug_category": "Hypertension_ACEi",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "empagllinide": {
+    "original_name": "Empagllinide",
+    "mapped_name": "Repaglinide",
+    "drug_category": "Meglitinides",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  },
+  "ator atorvastatin": {
+    "original_name": "Ator Atorvastatin",
+    "mapped_name": "Atorvastatin",
+    "drug_category": "Lipid_Statins",
+    "confidence": 0.75,
+    "method": "fuzzy"
+  }
+}

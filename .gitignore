@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+loggings/
+results/
+outputs/
+data/*
+!data/local_drug_mapping.json
+*.pkl
+*.joblib
+diabetes_subsets/
+ori_data_zip/
+guideline_pdfs/
+guidelines_md/
+work/

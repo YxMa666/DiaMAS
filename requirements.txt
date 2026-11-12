@@ -1,0 +1,10 @@
+# Python 3.11 (study environment: 3.11.14)
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.8.0
+shap==0.51.0
+joblib
+requests
+tqdm
+json-repair

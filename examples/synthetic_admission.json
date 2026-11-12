@@ -1,0 +1,88 @@
+{
+  "subject_id": 900001,
+  "hadm_id": 800001,
+  "database": "mimic4",
+  "anchor_year_group": "2017 - 2019",
+  "age": 68,
+  "gender": "M",
+  "los_days": 6.0,
+  "severity_tier": "Medium",
+  "all_diagnoses": [
+    {
+      "icd_code": "E1122",
+      "icd_version": 10,
+      "description": "Type 2 diabetes mellitus with diabetic chronic kidney disease",
+      "is_primary": true
+    },
+    {
+      "icd_code": "N183",
+      "icd_version": 10,
+      "description": "Chronic kidney disease, stage 3"
+    },
+    {
+      "icd_code": "I5022",
+      "icd_version": 10,
+      "description": "Chronic systolic (congestive) heart failure"
+    },
+    {
+      "icd_code": "I2510",
+      "icd_version": 10,
+      "description": "Atherosclerotic heart disease of native coronary artery"
+    },
+    {
+      "icd_code": "I10",
+      "icd_version": 10,
+      "description": "Essential (primary) hypertension"
+    }
+  ],
+  "clinical_metrics": {
+    "hba1c": 8.4,
+    "bmi": 31.2,
+    "bnp": 820,
+    "glucose": {
+      "fasting_glucose": 182,
+      "mean_glucose": 205
+    },
+    "kidney": {
+      "egfr": 38,
+      "creatinine": 1.8,
+      "ckd_g_stage": "G3b",
+      "aki_suspected": false,
+      "uacr": 120
+    },
+    "electrolytes": {
+      "potassium": 4.6,
+      "sodium": 138
+    },
+    "liver": {
+      "alt": 22,
+      "ast": 25
+    },
+    "dm_classification": {
+      "dm_type": "T2DM"
+    },
+    "dm_complications": {
+      "cardiovascular": true,
+      "heart_failure": true,
+      "nephropathy": true,
+      "hypoglycemia": false
+    }
+  },
+  "prior_medications": [
+    "Metformin 1000 mg",
+    "Insulin glargine",
+    "Atorvastatin 40 mg",
+    "Lisinopril 10 mg",
+    "Furosemide 40 mg"
+  ],
+  "discharge_medications": [
+    "Insulin glargine",
+    "Empagliflozin",
+    "Atorvastatin",
+    "Lisinopril",
+    "Furosemide",
+    "Metoprolol succinate"
+  ],
+  "anchor_year": 2160,
+  "admission_time": "2160-05-03 10:00:00"
+}
